@@ -1,0 +1,74 @@
+<div class="text-white">
+    <h1>Basics Pipes</h1>
+    <p>
+        Pipes included in Angular - Usually in the common module.
+    </p>
+
+
+    <div class="grid">
+        <div class="col col-md-4">
+            <p-card header="uppercase"
+                    [subheader]="nameLower | uppercase"
+                    > {{ nameLower | uppercase}}
+            </p-card>
+        </div>
+        <div class="col col-md-4">
+            <p-card header="lowercase"
+                    [subheader]="nameUpper | lowercase"
+                    > {{ nameUpper | lowercase}}
+            </p-card>
+        </div>
+        <div class="col col-md-4">
+            <p-card header="titlecase"
+                [subheader]="fullName | titlecase"
+                > {{ fullName | titlecase}}
+            </p-card>
+        </div>
+    </div>
+
+    <div class="text-white">
+        <h1>Date | Fecha | Pipe</h1>
+        <p>
+            Pipe to show the dates.
+        </p>
+    </div>
+
+    <div class="grid">
+        <div class="col col-md-12">
+            <p-card>
+                <ul>
+                    <li> Fecha </li>
+                    <li>date | date: 'short'</li>
+                    <li>date | date: 'long'</li>
+                    <li>date | date: 'hh:mm a z' </li>
+                </ul>
+
+                <hr>
+                <ul>
+                    <li>date|date:'long':'GMT-6': 'ar'</li>
+                    <li>date|date:'long':'GMT-5'</li>
+                    <li>date|date:'long':'GMT-6'</li>
+                </ul>
+            </p-card>
+            <div class="container-button">
+                <a target="_blank" href="https://angular.io/api/common/DatePipe" pButton type="button" label="Date pipe" class="p-button"></a>
+            </div>
+        </div>
+        <div class="col col-md-12">
+            <p-card>
+                <ul >
+                    <li> {{ date }} </li>  
+                    <li>{{  date | date: 'short' }}</li>
+                    <li>{{ date | date: 'long' }}</li> 
+                    <li>{{ date | date: 'yyyy hh:mm a z' }}</li> 
+                </ul>
+                <hr>
+                <ul>
+                    <li>{{date|date:'long':'GMT-6': 'ar'}}</li>
+                    <li>{{date|date:'long':'GMT-5'}}</li>
+                    <li>{{date|date:'long':'GMT-6'}}</li>
+                </ul>
+            </p-card>
+        </div>
+    </div>
+</div>

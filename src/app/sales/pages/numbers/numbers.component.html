@@ -1,0 +1,56 @@
+<div class="text-white">
+    <h1>Decimal Pipes</h1>
+    <p>
+        Pipes included in Angular - Usually in the common module.
+    </p>
+</div>
+
+
+<div class="grid">
+    <div class="col col-md-6">
+        <p-card
+            header="Gross Sales"
+            subheader="this year"
+        >
+        <div >
+            <div class="grid">
+                <p class="col-12">
+                    <i class="pi pi-dollar"></i>
+                    {{grossSales | number:'1.2-2'}}
+                </p> <!--I indicate 2 decimals-->
+                <p class="col-12">2 decimals</p>
+            </div>
+            <div class="grid">
+                <p class="col col-md-12">
+                    <i class="pi pi-dollar"></i>
+                    {{grossSales | number:'1.2-3'}} <!--I indicate 3 decimals-->
+                </p>
+                <p class="col-6">3 decimals</p>
+            </div>
+            <div class="grid">
+                <p class="col-12">
+                    <i class="pi pi-dollar"></i>
+                    {{grossSales | number:'1.2-4'}} <!--I indicate 4 decimals-->
+                </p>
+                <p class="col-12">4 decimals</p>
+            </div>
+        </div>
+        </p-card>
+    </div>
+    <div class="col col-md-3">
+        <p-card
+            header="Net sales"
+            subheader="this year"
+        >
+        {{(grossSales + 2000000) | currency:'EUR'}}
+        </p-card>
+    </div>
+    <div class="col col-md-3">
+        <p-card
+            header="Profit percentage"
+            subheader="this year"
+        >
+        {{percentaje | percent:'2.2-2'}}
+        </p-card>
+    </div>
+</div>
