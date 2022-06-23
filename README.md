@@ -7,11 +7,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 run npm i and ng serve -0
 
-Important
-Supported only desktop version.
-
-API URL https://developers.giphy.com/docs/api/endpoint/
-
 URL DEPLOY
 
 Only Desktop Version
